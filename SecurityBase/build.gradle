@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'com.huaweicloud', name: 'spring-cloud-starter-huawei-governance', version: '1.11.10-2024.0.x'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.1.0-alpha1'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-io', version: '12.1.0.alpha1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+
+}
